@@ -1,0 +1,20 @@
+
+button {
+    color: #1500ff; 
+    background-color: #ffff00; 
+    font-size: 50px;
+	/* 文字大小 */
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+	/*鼠标放上去后，颜色渐变时长*/
+	border-radius: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
