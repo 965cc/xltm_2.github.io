@@ -3,10 +3,8 @@ button {
     color: #1500ff; 
     background-color: #ffff00; 
     font-size: 50px;
-	/* 文字大小 */
     cursor: pointer;
     transition: background-color 0.5s ease;
-	/*鼠标放上去后，颜色渐变时长*/
 	border-radius: 10px;
 }
 
@@ -28,9 +26,7 @@ body {
   background-size: cover;
   background-position: center;
    background-repeat: no-repeat;
-/* 图像不会重复 */
    background-attachment: scroll; 
-	/* 是否随页面滚动,scroll不滚动
 	  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); /* 初始状态，背景图完全隐藏 */
 	  animation: donghua 2s forwards; 
   }
