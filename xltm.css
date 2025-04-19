@@ -16,7 +16,6 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-body,
 html {
     margin: 0;
     height: auto;
