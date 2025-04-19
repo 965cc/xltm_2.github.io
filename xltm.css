@@ -32,10 +32,10 @@ body {
     width: 100%;
     min-height: 100vh; 
     background-image: url('OIP (1).jpg');
-    background-size: cover; /* 改为 cover，让背景图覆盖整个视口 */
+    background-size: 100% 100%; /* 强制背景图覆盖整个视口 */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* 背景图随页面滚动 */
+    background-attachment: fixed; 
     animation: donghua 2s forwards;
 }
 
