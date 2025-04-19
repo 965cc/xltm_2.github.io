@@ -1,40 +1,45 @@
+/* 通用按钮样式 */
 button {
-    color: #1500ff;
-    background-color: rgba(255, 255, 0, 0.7);
+    color: #1500ff; 
+    background-color: rgba(255, 255, 0, 0.7); /* 黄色半透明背景 */
     font-size: 50px;
     cursor: pointer;
     transition: background-color 0.5s ease;
     border-radius: 10px;
+    border: none; /* 移除默认边框 */
+    padding: 10px 20px; /* 添加内边距 */
 }
 
 button:hover {
-    background-color: rgba(0, 86, 179, 0.7);
+    background-color: rgba(0, 86, 179, 0.7); /* 悬停时蓝色半透明 */
 }
 
 button:active {
-    background-color: rgba(0, 64, 128, 0.7);
+    background-color: rgba(0, 64, 128, 0.7); /* 点击时更深蓝色 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-html {
+/* 页面基础样式（关键：允许滚动） */
+body, html {
     margin: 0;
-    height: auto;
-    overflow: auto;
+    height: auto; 
+    overflow: auto; 
     position: relative;
 }
 
 body {
-    position: static;
+    position: static; 
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; 
     background-image: url('OIP (1).jpg');
-    background-size: contain;
+    background-size: cover; /* 改为 cover，让背景图覆盖整个视口 */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: scroll; /* 背景图随页面滚动 */
     animation: donghua 2s forwards;
 }
 
+/* 视频推荐区域样式 */
 .video {
     padding: 20px;
     margin-top: 20px;
@@ -47,38 +52,40 @@ body {
     margin-bottom: 10px;
 }
 
+/* 视频推荐区域内的按钮样式（覆盖通用按钮样式） */
 .video button {
-    display: block;
-    margin-bottom: 10px;
-    background-color: rgba(0, 123, 255, 0.7);
+    display: block; /* 按钮独占一行 */
+    margin: 10px 0; /* 上下边距 */
+    font-size: 20px; /* 调整视频区域按钮字体大小，避免过大 */
+    background-color: rgba(0, 123, 255, 0.7); /* 蓝色半透明背景 */
     color: white;
-    border: none;
     padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.video button:hover {
-    background-color: rgba(0, 86, 179, 0.7);
 }
 
 .video h1 {
     color: #555;
     font-size: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
+/* 背景图动画 */
 @keyframes donghua {
     from {
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); /* 初始隐藏底部 */
     }
     to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* 完全显示 */
     }
 }
 
-.styled-copy-btn {
-    font-size: 16px; 
-    padding: 5px 10px; 
+/* 手机端样式适配（媒体查询） */
+@media (max-width: 768px) { /* 针对手机及小屏幕设备 */
+    button {
+        font-size: 24px; /* 减小通用按钮字体 */
+        padding: 8px 16px; /* 调整通用按钮内边距 */
+    }
+   .video button {
+        font-size: 16px; /* 减小视频区域按钮字体 */
+        padding: 6px 12px; /* 调整视频区域按钮内边距 */
+    }
 }
